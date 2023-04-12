@@ -4,3 +4,29 @@
         height: 55px !important;
     }
 }
+
+#neubar {
+    background: transparent;
+}
+
+#neubar .dropdown-menu a:hover {
+    color: transparent;
+}
+
+#neubar .nav-item {
+    margin: auto 4px;
+}
+
+#neubar a {
+    padding-left: 12px;
+    padding-right: 12px;
+    color: white;
+}
+
+#neubar .dropdown-menu {
+    background: transparent;
+}
+
+a.navbar-brand {
+    color: #89DEFF;
+}

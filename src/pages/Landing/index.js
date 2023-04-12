@@ -27,6 +27,7 @@ function Landing() {
 
         {/* Features Section Starts */}
         <Features />
+        {/* Features Section Ends */}
 
       </Parallax>
     </div>

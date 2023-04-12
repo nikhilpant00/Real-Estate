@@ -6,39 +6,51 @@ function Navbar() {
   return (
     <div className="Navbar">
       <ParallaxLayer offset={0} speed={0}>
-        <div
-          className=""
-          style={{ height: "3rem", backgroundColor: "#00000045" }}
-        >
-          <nav className="navbar navbar-expand-lg navbar-light px-4 py-0">
-            <a className="navbar-brand text-light" href="#">
-              Navbar
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav">
-                <a className="nav-item nav-link active text-light" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
-                <a className="nav-item nav-link text-light" href="#">
-                  Features
-                </a>
-                <a className="nav-item nav-link text-light" href="#">
-                  Pricing
-                </a>
-                <a className="nav-item nav-link text-light disabled" href="#">
-                  Disabled
-                </a>
+        <div className="" style={{ backgroundColor: "#00000045" }}>
+          <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                OCPL REAL ESTATE
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item">
+                    <a class="nav-link mx-2 active" href="#">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="#">
+                      Features
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="#">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="#">
+                      Subscribe
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="#">
+                      Login
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </nav>
