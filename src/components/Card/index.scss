@@ -1,0 +1,54 @@
+.card-page-2{
+    &:hover{
+        background-color: #171717;
+    }
+    margin: 0 1rem;
+    width: 28%;
+    border-radius: 6px;
+    height: 21.5rem;
+    background-color: #222322;
+    transition: all 1.5s;
+    h1{
+        color: gray;
+        margin-bottom: 10px;
+        padding: 2rem 0 0 2rem ;
+    }
+    h2{
+        width: 80%;
+        color: white;
+        line-height: 1;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+    }
+    .show-text{
+        visibility: hidden;
+        height: 0;
+        padding: 0 2rem;
+    }
+    .show-image{
+        visibility: hidden;
+        width: 40%;
+        height: 30%;
+        float: right;
+        img{
+            width: 100%;
+            height: 100%;
+            border-bottom-left-radius: 40px;
+            border-top-right-radius: 5px;
+        }
+    }
+    &.active{
+        height: 25rem;
+        background-color: #0e739b;
+        h1{
+            color: #89deff;
+        }
+        .show-text{
+            color: white;
+            visibility: visible;
+        }
+        .show-image{
+            visibility: visible;
+        }
+    }
+}

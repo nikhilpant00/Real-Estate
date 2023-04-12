@@ -1,0 +1,110 @@
+.animation,
+.animation_layer {
+    height: 1000px;
+}
+.animation {
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+.animation_layer.parallax {
+    background-position: bottom center;
+    background-size: cover;
+    position: fixed;
+}
+
+
+//HERO TEXT BOX
+.hero-text-container {
+    div {
+        inset: 100vh 0 0 0 !important;
+        z-index: 6;
+    }
+}
+.hero-text {
+        background: rgba(0, 0, 0, 0.378);
+    text-align: center;
+    color: white;
+    width: 100%;
+    h1{
+        font-size: 6rem;
+        letter-spacing: 2px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+    .description{
+        display: flex;
+        padding: 0 23%;
+        justify-content: space-between;
+    }
+}
+
+
+//BACKGROUNG IMAGE FOR EACH LAYER
+#skyL {
+    background-image: url(../../assets/images/sky-l.png);
+}
+#skyR {
+    background-image: url(../../assets/images/sky-r.png);
+}
+#forest {
+    background-image: url(../../assets/images/forest.png);
+}
+#house {
+    background-image: url(../../assets/images/house.png);
+}
+#sea {
+    background-image: url(../../assets/images/sea.png);
+}
+
+//INSET FOR EACH LAYER
+.layer-1a {
+    div {
+        width: 100vw;
+        z-index: 0;
+    }
+}
+.layer-1b{
+    div{
+        width: 100vw !important;
+        inset: 200px 0 0 0;
+        z-index: 1;
+    }
+}
+.layer-2a {
+    div {
+        width: 100vw !important;
+        z-index: 0;
+    }
+}
+.layer-2b {
+    div {
+        width: 100vw !important;
+        inset: 200px 0 0 0;
+        z-index: 1;   
+    }
+}
+.layer-3 {
+    div {
+        inset: -120px 0 0 0;
+        z-index: 3;
+    }
+}
+.layer-4 {
+    div {
+        inset: -125px 0 0 0;
+        z-index: 4;
+    }
+}
+.layer-5a {
+    div {
+        inset: -180px 0 0 0;
+        z-index: 5;
+    }
+}
+.layer-5b {
+    div {
+        inset: -80px 0 0 0;
+        z-index: 5;
+    }
+}
