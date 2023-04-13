@@ -41,7 +41,7 @@ function Login() {
     reset();
   };
   return (
-    <div className="container">
+    <div className="login-container">
       <div className="login__content">
         <img src={LoginBg} alt="login image" className="login__img" />
         <form

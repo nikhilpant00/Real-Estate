@@ -42,7 +42,7 @@ function SignUp() {
     reset();
   };
   return (
-    <div className="container">
+    <div className="sign-container">
       <div className="sign__content">
         <img src={SignBg} alt="sign image" className="sign__img" />
         <form className="sign__form" onSubmit={handleSubmit(onSubmit)}>
