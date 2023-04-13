@@ -6,6 +6,7 @@ import { Parallax } from "@react-spring/parallax";
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import Features from '../../components/Features';
+import Testimonial from '../../components/Testimonial';
 
 
 function Landing() {
@@ -28,6 +29,10 @@ function Landing() {
         {/* Features Section Starts */}
         <Features />
         {/* Features Section Ends */}
+
+        {/* Testimonial Section Starts */}
+        <Testimonial />
+        {/* Testimonial Section Ends */}
 
       </Parallax>
     </div>

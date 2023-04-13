@@ -16,7 +16,6 @@ function Carousel() {
     setIndex(index-1);
     else if(action=='inc')
     setIndex(index+1);
-    console.log(index)
   }
 
   useEffect(()=>{

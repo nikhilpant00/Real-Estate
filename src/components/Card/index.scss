@@ -5,7 +5,7 @@
     margin: 0 1rem;
     width: 28%;
     border-radius: 6px;
-    height: 21.5rem;
+    height: 21.5rem !important;
     background-color: #222322;
     transition: all 1.5s;
     h1{
@@ -38,7 +38,7 @@
         }
     }
     &.active{
-        height: 25rem;
+        height: 25rem !important;
         background-color: #0e739b;
         h1{
             color: #89deff;

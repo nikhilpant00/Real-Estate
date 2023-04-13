@@ -6,7 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 function Hero() {
   return (
-    <>
+    <div className="hero">
       <div className="layer-1a">
         <ParallaxLayer offset={0} horizontal speed={3}>
           <div className="animation_layer parallax " id="skyL"></div>
@@ -62,7 +62,7 @@ function Hero() {
           <div className="animation_layer parallax" id="sea"></div>
         </ParallaxLayer>
       </div>
-    </>
+    </div>
   );
 }
 

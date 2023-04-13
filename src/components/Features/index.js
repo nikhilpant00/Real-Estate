@@ -6,7 +6,7 @@ import Carousel from '../Carousel';
 
 function Features() {
   return (
-    <>
+    <div className='features'>
       {/* Backgorund For Features Section */}
       <div className="background">
         <ParallaxLayer offset={0.999} speed={0.7}>
@@ -44,7 +44,7 @@ function Features() {
         </ParallaxLayer>
       </div>
       {/* Carousel Ends */}
-    </>
+    </div>
   );
 }
 
