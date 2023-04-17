@@ -5,7 +5,7 @@ import { GrFacebookOption, GrTwitter } from "react-icons/gr";
 
 
 function Card2(props) {
-    console.log(props)
+    // console.log(props)
   return (
     <div className="card2">
       <div className="card-block">

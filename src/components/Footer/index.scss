@@ -1,0 +1,64 @@
+.footer{
+    .background-layer{
+        div{
+            inset: 600px 0 0 0 !important;
+            // height: 400px !important;
+        }
+        #footer-background{
+            // background-image: url(../../assets/images/footer-removebg-preview.png);
+            // background-size: cover;
+            background-color: black;
+        }
+        .background{
+            height: 70vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .icons-div{
+        .icon{
+            width: 28px;
+            display: inline-block;
+            height: 28px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        margin-bottom: 4px;
+    }
+    .info{
+        p{
+            margin: 0;
+            color: rgb(185, 185, 185);
+        }
+    }
+    .terms-privacy{
+        span{
+            font-size: 1.2rem;
+            margin: 3px 2px;
+            color: rgb(218, 218, 218);
+        }
+    }
+    .ocpl-tech{
+        p{
+            margin-top: 16px;
+        }
+    }
+    // .background-layer1{
+    //     div{
+    //         inset: 100px 0 0 0 !important;
+    //         // height: 400px !important;
+    //     }
+    //     #footer-background{
+    //         background-image: url(../../assets/images/footer-removebg-preview.png);
+    //         // background-size: cover;
+    //         width: 50%;
+    //         // background-color: black;
+    //     }
+    //     .background{
+    //         height: 100%;
+    //         background-size: contain;
+    //         background-repeat: no-repeat;
+    //     }
+    // }
+}

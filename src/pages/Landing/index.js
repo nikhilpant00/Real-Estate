@@ -7,14 +7,16 @@ import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import Features from '../../components/Features';
 import Testimonial from '../../components/Testimonial';
+import Working from '../../components/Working';
+import Footer from '../../components/Footer';
 
 
 function Landing() {
   return (
-    <div>
+    <div className='landing' id='landing'>
       <Parallax
         pages={3}
-        style={{ top: "0", left: "0", backgroundColor: "#e7f3ff" }}
+        style={{ top: "0", left: "0", backgroundColor: "white" }}
         className="animation"
         config={{ pointerEvents: true }}
       >
@@ -33,6 +35,14 @@ function Landing() {
         {/* Testimonial Section Starts */}
         <Testimonial />
         {/* Testimonial Section Ends */}
+
+        {/* Working Section Starts */}
+        <Working />
+        {/* Working Section Ends */}
+        
+        {/* Footer Section Starts */}
+        <Footer />
+        {/* Footer Section Ends */}
 
       </Parallax>
     </div>

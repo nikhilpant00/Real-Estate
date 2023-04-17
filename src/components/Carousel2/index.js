@@ -23,7 +23,7 @@ function Carousel2() {
      );
    }, 2500);
 
-   console.log(index); // Move this inside the interval callback to see the updated index value.
+  //  console.log(index);  Move this inside the interval callback to see the updated index value.
 
    return () => {
      clearInterval(intervalId);

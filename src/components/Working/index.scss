@@ -1,0 +1,81 @@
+.working{
+    .background-layer{
+        div{
+            inset: -230px 0 0 0 !important;
+        }
+    }
+    #working-background {
+        background-image: url('../../assets/images/working.png');
+    }
+    .background {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .carousel-layer{
+        div{
+            inset: -200px 0 0 0 !important;
+            z-index: 1;
+        }
+        .carousel-div{
+            height: 100%;
+            // border: 1px solid;
+            margin:0 20%;
+            display: flex;
+
+            .toggle-nums{
+                height: 80%;
+                width: 30%;
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                h2{
+                    width: 80%;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: 4rem auto;
+                    margin-bottom: 3rem;
+                }
+                .nums{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .num{
+                        transition: opacity 1s ease-in-out;
+                        opacity: .8;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        height: 4rem;
+                        width: 4rem;
+                        background-color: white;
+                        border-radius: 50%;
+                        margin-bottom: 2rem;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+                        p{
+                            margin: 0;
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                        }
+                        &.active{
+                            opacity: 1;
+                            height: 5rem;
+                            width: 5rem;
+                            background-color: #1EAAFC;
+                            p{
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .card-component{
+                height: 80%;
+                width: 70%;
+                // border: 1px solid;
+            }
+        }
+    }
+}

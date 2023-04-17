@@ -19,7 +19,7 @@ function Carousel() {
   }
 
   useEffect(()=>{
-    console.log(index)
+    // console.log(index)
       const newCards = cardsData.map((item, ind) => {
         if (ind == index) return <Card showStatus={"active"} props={item}  />;
         else return <Card props={item} />;
