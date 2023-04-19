@@ -3,7 +3,7 @@ import "./index.scss";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { Link } from "react-router-dom";
 
-function Navbar({leftLinks, rightLinks}) {
+function Navbar({leftLinks, rightLinks, setIsLogin}) {
 
  console.log(leftLinks)
   return (
@@ -45,7 +45,21 @@ function Navbar({leftLinks, rightLinks}) {
                 </ul>
                 <ul className="navbar-nav ms-auto ">
                   {rightLinks &&
-                    rightLinks.map((link, index) => (
+                    rightLinks.map((link, index) => {
+                      if(rightLinks.length===1){
+                        return(<li className="nav-item" key={index}>
+                          <Link to={`${link.direct}`}>
+                            <button
+                              type="button"
+                              className="btn btn-outline-info  mx-2 md:fs-4 fs-5"
+                              onClick={() => setIsLogin(false)}
+                            >
+                              {link.title}
+                            </button>
+                          </Link>
+                        </li>)
+                      }
+                      return (
                       <li className="nav-item" key={index}>
                         <Link to={`${link.direct}`}>
                           <button
@@ -56,7 +70,7 @@ function Navbar({leftLinks, rightLinks}) {
                           </button>
                         </Link>
                       </li>
-                    ))}
+                    )})}
                 </ul>
               </div>
             </div>

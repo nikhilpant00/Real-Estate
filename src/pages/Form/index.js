@@ -3,28 +3,8 @@ import "./index.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-// import { create } from "ipfs-http-client";
 const schema = Yup.object().shape({
-  // file: Yup.mixed()
-  //   .required("File is required")
-  //   .test(
-  //     "fileFormat",
-  //     "PDF ONLY",
-  //     (value) =>
-  //       value &&
-  //       (
-  //         value[0].type === "image/jpeg" ||
-  //         value[0].type === "image/bmp" ||
-  //         value[0].type === "image/png" ||
-  //         value[0].type === "application/pdf" ||
-  //         value[0].type === "application/msword"
-  //       ).includes(value.type)
-  //   )
-  //   .test(
-  //     "fileSize",
-  //     "File size is too large",
-  //     (value) => value && value.size <= 5000000
-  //   ),
+
   address: Yup.string().required("Address is required"),
   transaction: Yup.string().required("Transaction ID is required"),
   area: Yup.string().required("Area is required"),

@@ -11,8 +11,8 @@ import Working from '../../components/Working';
 import Footer from '../../components/Footer';
 
 
-function Landing() {
-  const [isLoggedIn, SetIsLoggedIn]= useState(true);
+function Landing({isLogin, setIsLogin}) {
+  // const [isLoggedIn, SetIsLoggedIn]= useState(true);
 
   return (
     <div className="landing" id="landing">
@@ -23,16 +23,15 @@ function Landing() {
         config={{ pointerEvents: true }}
       >
         {/* Navbar Starts */}
-        {isLoggedIn ? (
+        {isLogin ? (
           <Navbar
             leftLinks={[
               { title: "Home", direct: "/" },
               { title: "Subscription", direct: "/subscription" },
-              { title: "Details", direct: "/loggedIn" },
+              { title: "Dashboard", direct: "/loggedIn" },
             ]}
-            rightLinks={[
-              { title: "Log Out", direct: "/" },
-            ]}
+            rightLinks={[{ title: "Log Out", direct: "/" }]}
+            setIsLogin={setIsLogin}
           />
         ) : (
           <Navbar

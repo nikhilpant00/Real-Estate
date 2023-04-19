@@ -5,7 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import { Parallax } from "@react-spring/parallax";
 const schema = Yup.object().shape({
@@ -27,6 +27,7 @@ const schema = Yup.object().shape({
     .oneOf([Yup.ref("password"), null], "Passwords must match"),
 });
 function SignUp() {
+  const Navigate = useNavigate();
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isConfirmPasswordVisible, setIsConfirmVisible] = useState(false);
   const {
@@ -201,7 +202,11 @@ function SignUp() {
                   <button
                     className="sign__button"
                     disabled={isDisabled}
-                    onClick={() => console.log("hello")}
+                    onClick={(event) => {
+                      console.log("done");
+                      event.preventDefault();
+                      Navigate("/login");
+                    }}
                   >
                     Sign Up
                   </button>

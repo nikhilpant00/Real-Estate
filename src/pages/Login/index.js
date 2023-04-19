@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import { Parallax } from "@react-spring/parallax";
+import { useNavigate } from "react-router-dom";
 const schema = Yup.object().shape({
   email: Yup.string()
     .required("Please Enter your Email")
@@ -21,7 +22,8 @@ const schema = Yup.object().shape({
     )
     .required("Password is required"),
 });
-function Login() {
+function Login(props) {
+  const Navigate= useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const {
     register,
@@ -140,7 +142,7 @@ function Login() {
                   <button
                     className="login__button"
                     disabled={isDisabled}
-                    onClick={() => console.log("hello")}
+                    onClick={(event) => {props.setIsLogin(true); console.log('done'); event.preventDefault(); Navigate('/LoggedIn');}}
                   >
                     Log In
                   </button>

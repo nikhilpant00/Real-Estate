@@ -6,10 +6,12 @@ import { BsSearchHeart } from "react-icons/bs";
 import ClientID from "../../assets/constant/client";
 import { Link } from "react-router-dom";
 
-const LoggedIn = () => {
+const LoggedIn = ({isLogin}) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResult, setSearchResult] = useState(null);
   const [isPremium, setIsPremium] = useState(false);
+    const [isLoggedIn, SetIsLoggedIn] = useState(true);
+
 
   const handleSubscription = async () => {
     try {
@@ -63,14 +65,35 @@ const LoggedIn = () => {
 
   return (
     <Parallax>
-      <Navbar
+      {/* <Navbar
         leftLinks={[
           { title: "Home", direct: "/" },
           { title: "Subscription", direct: "/subscription" },
           { title: "Details", direct: "/loggedIn" },
         ]}
         rightLinks={[{ title: "Log Out", direct: "/" }]}
-      />
+      /> */}
+      {isLogin ? (
+        <Navbar
+          leftLinks={[
+            { title: "Home", direct: "/" },
+            { title: "Subscription", direct: "/subscription" },
+            { title: "Dashboard", direct: "/loggedIn" },
+          ]}
+          rightLinks={[{ title: "Log Out", direct: "/" }]}
+        />
+      ) : (
+        <Navbar
+          leftLinks={[
+            { title: "Home", direct: "/" },
+            { title: "Subscription", direct: "/subscription" },
+          ]}
+          rightLinks={[
+            { title: "Sign Up", direct: "/SignUp" },
+            { title: "Login", direct: "/login" },
+          ]}
+        />
+      )}
       <div className="login-hero">
         <section className="hero-container">
           <div className="hero-content">
