@@ -2,10 +2,17 @@ import React from "react";
 import "./index.scss";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { Link } from "react-router-dom";
+import { logout } from "../webauthn/webauthn";
 
-function Navbar({leftLinks, rightLinks, setIsLogin}) {
-
- console.log(leftLinks)
+function Navbar({ leftLinks, rightLinks, setIsLogin }) {
+  const handleLogout = () => {
+    logout().then(() => {
+      setIsLogin(false);
+      console.log("handlelogout");
+      // setProfileData(null);
+    });
+  };
+  console.log(leftLinks);
   return (
     <div className="Navbar">
       <ParallaxLayer offset={0} speed={0}>
@@ -32,7 +39,7 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav mx-5">
                   {leftLinks &&
-                    leftLinks.map((link ,index) => (
+                    leftLinks.map((link, index) => (
                       <li className="nav-item" key={index}>
                         <Link
                           to={`${link.direct}`}
@@ -46,31 +53,34 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
                 <ul className="navbar-nav ms-auto ">
                   {rightLinks &&
                     rightLinks.map((link, index) => {
-                      if(rightLinks.length===1){
-                        return(<li className="nav-item" key={index}>
+                      if (rightLinks.length === 1) {
+                        return (
+                          <li className="nav-item" key={index}>
+                            <Link to={`${link.direct}`}>
+                              <button
+                                type="button"
+                                className="btn btn-outline-info  mx-2 md:fs-4 fs-5"
+                                onClick={handleLogout}
+                              >
+                                {link.title}
+                              </button>
+                            </Link>
+                          </li>
+                        );
+                      }
+                      return (
+                        <li className="nav-item" key={index}>
                           <Link to={`${link.direct}`}>
                             <button
                               type="button"
                               className="btn btn-outline-info  mx-2 md:fs-4 fs-5"
-                              onClick={() => setIsLogin(false)}
                             >
                               {link.title}
                             </button>
                           </Link>
-                        </li>)
-                      }
-                      return (
-                      <li className="nav-item" key={index}>
-                        <Link to={`${link.direct}`}>
-                          <button
-                            type="button"
-                            className="btn btn-outline-info  mx-2 md:fs-4 fs-5"
-                          >
-                            {link.title}
-                          </button>
-                        </Link>
-                      </li>
-                    )})}
+                        </li>
+                      );
+                    })}
                 </ul>
               </div>
             </div>
@@ -82,4 +92,3 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
 }
 
 export default Navbar;
-
