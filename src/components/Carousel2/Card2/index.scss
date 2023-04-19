@@ -60,3 +60,29 @@
         }
     }
 }
+
+@media screen and (max-width: 590px) {
+    .card2 {
+        .card-block {
+            .image-div{
+                width: 30%;
+                height: 40%;
+            }
+        }
+                .content-div{
+                    height: 103% !important;
+                }
+        .text-div{
+            p{
+                font-size: 14px;
+            }
+        }        
+    }
+}
+@media screen and (max-width: 1250px) {
+    .card2{
+        .content-div{
+            margin-left: 20%;
+        }
+    }
+}

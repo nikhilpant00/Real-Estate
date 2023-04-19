@@ -1,4 +1,8 @@
 .card-page-2{
+    &.smallScreen{
+        margin: auto;
+        width: 40%;
+    }
     &:hover{
         background-color: #171717;
     }
@@ -50,5 +54,21 @@
         .show-image{
             visibility: visible;
         }
+    }
+}
+@media screen and (max-width: 500px) {
+    .card-page-2 {
+            &.smallScreen {
+                    width: 92% !important;
+                        height: 22rem !important;
+            }
+    }
+}
+@media screen and (max-width: 800px) {
+    .card-page-2 {
+            &.smallScreen {
+                    width: 60%;
+                        height: 22rem !important;
+            }
     }
 }

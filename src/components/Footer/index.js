@@ -19,15 +19,10 @@ function Footer() {
             id="footer-background"
             className="background"
           >
-            <img src={image5} style={{ width: "100vw", marginTop: "-350px" }} />
+            <img src={image5} className="footer-image" />
             <div
-              style={{
-                color: "white",
-                width: "50%",
-                margin: "0 auto",
-                marginTop: "-55px",
-                textAlign: "center",
-              }}
+              className="footer-content"
+              
             >
               <div className="icons-div">
                 <span className="icon">

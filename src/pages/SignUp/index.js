@@ -45,7 +45,16 @@ function SignUp() {
   return (
     <Parallax>
       <>
-        <Navbar />
+        <Navbar
+          leftLinks={[
+            { title: "Home", direct: "/" },
+            { title: "Subscription", direct: "/subscription" },
+          ]}
+          rightLinks={[
+            { title: "Sign Up", direct: "/SignUp" },
+            { title: "Login", direct: "/login" },
+          ]}
+        />
         <div className="sign-container">
           <div className="sign__content">
             {/* <img src={SignBg} alt="sign image" className="sign__img" /> */}

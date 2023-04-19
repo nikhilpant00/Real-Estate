@@ -108,3 +108,44 @@
         z-index: 5;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .hero{
+        .hero-text-container{
+            .hero-text{
+                h1{
+                    font-size: 36px !important;
+                }
+            }
+        }
+        .description{
+            padding: 0 5% !important;
+            p{
+                font-size: 12px !important;
+            }
+        }
+                .hero-text-container {
+                    div {
+                        inset: 110vh 0 0 0 !important;
+                    }
+                }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .hero{
+        .hero-text-container{
+            .hero-text{
+                h1{
+                    font-size: 56px;
+                }
+            }
+        }
+        .description{
+            padding: 0 15%;
+            p{
+                font-size: 17px;
+            }
+        }
+  
+    }
+}

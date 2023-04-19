@@ -57,3 +57,30 @@
     }
 
 }
+
+@media screen and (max-width: 1000px) {
+    .testimonial {
+        .text-area-layer {
+                div {
+                    inset: -100px 0 0 0 !important;
+                }
+            } 
+                .carousel-layer {
+                    div {
+                        inset: 15px 0 0 0 !important;
+                    }
+                    }             
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .testimonial {
+            .text-area-layer {
+                .textblock{
+                    h1{
+                        font-size: 75px !important;
+                    }
+                }
+            }
+        }        
+}

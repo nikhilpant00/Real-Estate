@@ -35,12 +35,29 @@ function Working() {
         setNums(newNums);
     },[index])
 
+    const [smallScreen, setSmallScreen] = useState(false);
+
+    useEffect(() => {
+      const mediaQuery = window.matchMedia("(max-width: 720px)");
+      setSmallScreen(mediaQuery.matches);
+
+      const listener = () => {
+        setSmallScreen(mediaQuery.matches);
+      };
+
+      mediaQuery.addEventListener("change", listener);
+
+      return () => {
+        mediaQuery.removeEventListener("change", listener);
+      };
+    }, []);
+
   return (
     <div className="working">
       <div className="background-layer">
         <ParallaxLayer offset={2} speed={0.7}>
           <div
-            style={{ height: "100%"}}
+            style={{ height: "100%" }}
             id="working-background"
             className="background"
           ></div>
@@ -49,11 +66,10 @@ function Working() {
       <div className="carousel-layer">
         <ParallaxLayer offset={2} speed={0.9}>
           <div className="carousel-div">
+            {!smallScreen ? null : <h2 className='small-size-h1'>It works simply like </h2>}
             <div className="toggle-nums">
-              <h2>It works simply like </h2>
-              <div className="nums">
-                {nums}
-              </div>
+              {smallScreen ? null : <h2>It works simply like </h2>}
+              <div className="nums">{nums}</div>
             </div>
             <div className="card-component">
               <Carousel3 index={index} />

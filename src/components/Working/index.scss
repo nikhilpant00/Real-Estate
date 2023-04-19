@@ -53,6 +53,7 @@
                         background-color: white;
                         border-radius: 50%;
                         margin-bottom: 2rem;
+                        // margin-left: 22%;
                         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
                         p{
                             margin: 0;
@@ -78,4 +79,79 @@
             }
         }
     }
+    .small-size-h1{
+        text-align: center;
+            font-size: 2.3rem;
+            margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .toggle-nums {
+        margin-left: -4rem;
+    }
+    .card-component{
+        margin-right: 4rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    .toggle-nums {
+           h2{
+            font-size: 1.5rem;
+           }
+        }
+}
+
+@media screen and (max-width: 720px) {
+    .working{
+        .carousel-layer {
+                div {
+                    inset: -280px 0 0 0 !important;
+                    z-index: 1;
+                }
+            }        
+     
+        .carousel-div{
+            flex-direction: column;
+        }
+        .carousel-layer .carousel-div .toggle-nums .nums {
+            flex-direction: row;
+        }
+                .carousel-layer .carousel-div .toggle-nums h2 {
+                    margin: 0 ;
+                    margin-left: 55% ;
+                    margin-right: 30px ;
+                }
+        .toggle-nums{
+            order: 1;
+            flex-direction: row !important;
+            margin: auto;
+            margin-left: 19%;
+            .num{
+                margin-right: 20px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 376px) {
+    .working {
+            .carousel-layer {
+                div {
+                    inset: -250px 0 0 0 !important;
+                    z-index: 1;
+                }
+            }
+    }    
+    .toggle-nums {
+        margin-left: -18% !important;
+         h2 {
+                margin-left: 0 !important;
+            }
+            .nums{
+                margin-left: 18%;
+                align-items: start !important;
+            }
+        }  
+                .small-size-h1 {
+                    font-size: 1.8rem !important;
+                }
 }

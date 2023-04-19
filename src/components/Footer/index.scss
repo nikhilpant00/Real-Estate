@@ -14,6 +14,18 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
+        .footer-image{
+            width: 100vw;
+            margin-top: -22%;
+        }
+    }
+    .footer-content{
+      
+                    color: white;
+                        width: 50%;
+                        margin: 0 auto;
+                        margin-top: -55px;
+                        text-align: center;
     }
     .icons-div{
         .icon{
@@ -44,21 +56,41 @@
             margin-top: 16px;
         }
     }
-    // .background-layer1{
-    //     div{
-    //         inset: 100px 0 0 0 !important;
-    //         // height: 400px !important;
-    //     }
-    //     #footer-background{
-    //         background-image: url(../../assets/images/footer-removebg-preview.png);
-    //         // background-size: cover;
-    //         width: 50%;
-    //         // background-color: black;
-    //     }
-    //     .background{
-    //         height: 100%;
-    //         background-size: contain;
-    //         background-repeat: no-repeat;
-    //     }
-    // }
+}
+@media screen and (max-width:1024px) {
+    .footer {
+        .background-layer {
+            div {
+                inset: 25% 0 0 0 !important;
+            }
+        }
+                .footer-content {
+                    margin-top: -4%;
+                }
+
+    }        
+}
+@media screen and (max-width:750px) {
+    .footer {
+        .footer-content {
+        
+                width: 90%;
+            }
+    }
+}
+@media screen and (max-width:450px) {
+    .footer {
+        .info {
+                p {
+                    font-size: .7rem;
+                }
+            }
+        .terms-privacy {
+                span {
+                    font-size: .8rem;
+                    margin: 3px 2px;
+                    color: rgb(218, 218, 218);
+                }
+            }
+    }
 }

@@ -12,9 +12,30 @@ function Subscription() {
     setBallPosition(ballPosition === "right" ? "left" : "right");
     setIsFlipped(!isFlipped);
   };
+  const [isLoggedIn, SetIsLoggedIn] = useState(true);
   return (
     <Parallax>
-      <Navbar />
+      {isLoggedIn ? (
+        <Navbar
+          leftLinks={[
+            { title: "Home", direct: "/" },
+            { title: "Subscription", direct: "/subscription" },
+            { title: "Details", direct: "/loggedIn" },
+          ]}
+          rightLinks={[{ title: "Log Out", direct: "/" }]}
+        />
+      ) : (
+        <Navbar
+          leftLinks={[
+            { title: "Home", direct: "/" },
+            { title: "Subscription", direct: "/subscription" },
+          ]}
+          rightLinks={[
+            { title: "Sign Up", direct: "/SignUp" },
+            { title: "Login", direct: "/login" },
+          ]}
+        />
+      )}
       <section className=" p-sm-5 p-3  price-container">
         <div className="price-margin">
           <div className="text-center px-md-5 px-2 mx-md-5 mx-2">

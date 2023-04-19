@@ -1,9 +1,9 @@
 .login-hero {
-    background-color: #E7E7E7;
+    background-color: #e7e7e7;
 
     .hero-container {
         background-image: url(../../assets/images/original.webp);
-        background-color: #E7E7E7;
+        background-color: #e7e7e7;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right;
@@ -114,6 +114,24 @@
                     padding-bottom: 28px;
                     padding-right: 42px;
                 }
+            }
+        }
+
+        .btn-subscribe {
+            width: 12rem;
+            text-decoration: none;
+            background-color: var(--first-color);
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                background-color: #09064e !important;
+                color: white;
             }
         }
     }

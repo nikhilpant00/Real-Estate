@@ -23,3 +23,46 @@
         }
     }
 }
+@media screen and (max-width: 850px) {
+    .card3 {
+            .card-container {
+                height: 34rem;
+                width: 30rem;
+            }
+        }            
+}
+@media screen and (max-width: 660px) {
+    .card3 {
+        .card-container {
+            height: 34rem;
+            width: 26rem ;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .card3 {
+            .card-container {
+                height: 34rem;
+                width: 20rem ;
+            }
+        }
+}
+@media screen and (max-width: 400px) {
+    .card3 {
+            .card-container {
+                height: 24rem;
+                width: 15rem;
+            }
+        }            
+}
+@media screen and (max-width: 320px) {
+    .card3 {
+            .card-container {
+                height: 24rem;
+                width: 13rem;
+                p{
+                    font-size: 13px;
+                }
+            }
+        }            
+}

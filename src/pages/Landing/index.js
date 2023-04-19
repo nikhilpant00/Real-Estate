@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.scss';
 import { Parallax } from "@react-spring/parallax";
 
@@ -12,8 +12,10 @@ import Footer from '../../components/Footer';
 
 
 function Landing() {
+  const [isLoggedIn, SetIsLoggedIn]= useState(true);
+
   return (
-    <div className='landing' id='landing'>
+    <div className="landing" id="landing">
       <Parallax
         pages={3}
         style={{ top: "0", left: "0", backgroundColor: "white" }}
@@ -21,7 +23,29 @@ function Landing() {
         config={{ pointerEvents: true }}
       >
         {/* Navbar Starts */}
-        <Navbar />
+        {isLoggedIn ? (
+          <Navbar
+            leftLinks={[
+              { title: "Home", direct: "/" },
+              { title: "Subscription", direct: "/subscription" },
+              { title: "Details", direct: "/loggedIn" },
+            ]}
+            rightLinks={[
+              { title: "Log Out", direct: "/" },
+            ]}
+          />
+        ) : (
+          <Navbar
+            leftLinks={[
+              { title: "Home", direct: "/" },
+              { title: "Subscription", direct: "/subscription" },
+            ]}
+            rightLinks={[
+              { title: "Sign Up", direct: "/SignUp" },
+              { title: "Login", direct: "/login" },
+            ]}
+          />
+        )}
         {/* Navbar Ends */}
 
         {/* Hero Section Starts */}
@@ -39,11 +63,10 @@ function Landing() {
         {/* Working Section Starts */}
         <Working />
         {/* Working Section Ends */}
-        
+
         {/* Footer Section Starts */}
         <Footer />
         {/* Footer Section Ends */}
-
       </Parallax>
     </div>
   );

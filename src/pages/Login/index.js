@@ -39,7 +39,16 @@ function Login() {
   return (
     <Parallax>
       <>
-        <Navbar />
+        <Navbar
+          leftLinks={[
+            { title: "Home", direct: "/" },
+            { title: "Subscription", direct: "/subscription" },
+          ]}
+          rightLinks={[
+            { title: "Sign Up", direct: "/SignUp" },
+            { title: "Login", direct: "/login" },
+          ]}
+        />
         <div className="login-container">
           <div className="login__content">
             {/* <img src={LoginBg} alt="login image" className="login__img" /> */}
