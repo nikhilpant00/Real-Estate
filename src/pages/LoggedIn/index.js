@@ -6,12 +6,11 @@ import { BsSearchHeart } from "react-icons/bs";
 import ClientID from "../../assets/constant/client";
 import { Link } from "react-router-dom";
 
-const LoggedIn = ({isLogin}) => {
+const LoggedIn = ({ isLogin, setIsLogin }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResult, setSearchResult] = useState(null);
   const [isPremium, setIsPremium] = useState(false);
-    const [isLoggedIn, SetIsLoggedIn] = useState(true);
-
+  const [isLoggedIn, SetIsLoggedIn] = useState(true);
 
   const handleSubscription = async () => {
     try {
@@ -81,6 +80,7 @@ const LoggedIn = ({isLogin}) => {
             { title: "Dashboard", direct: "/loggedIn" },
           ]}
           rightLinks={[{ title: "Log Out", direct: "/" }]}
+          setIsLogin={setIsLogin}
         />
       ) : (
         <Navbar

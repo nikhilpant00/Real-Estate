@@ -50,15 +50,18 @@ function App() {
           element={<Landing isLogin={isLogin} setIsLogin={setIsLogin} />}
         />
         <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
-        <Route path="/signUp" element={<SignUp/>} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="/form" element={<Form />} />
         <Route element={<PrivateRoutes isLogin={isLogin} />}>
-          <Route path="/loggedIn" element={<LoggedIn isLogin={isLogin} />} />
+          <Route
+            path="/loggedIn"
+            element={<LoggedIn isLogin={isLogin} setIsLogin={setIsLogin} />}
+          />
         </Route>
 
         <Route
           path="/subscription"
-          element={<Subscription isLogin={isLogin} />}
+          element={<Subscription isLogin={isLogin} setIsLogin={setIsLogin} />}
         />
       </Routes>
     </>

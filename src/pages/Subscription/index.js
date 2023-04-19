@@ -4,7 +4,7 @@ import { AiFillCloseCircle, AiFillCheckCircle } from "react-icons/ai";
 import Navbar from "../../components/Navbar";
 import { Parallax } from "@react-spring/parallax";
 
-function Subscription({isLogin}) {
+function Subscription({isLogin, setIsLogin}) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [ballPosition, setBallPosition] = useState("left");
   const handleClick = (e) => {
@@ -12,7 +12,7 @@ function Subscription({isLogin}) {
     setBallPosition(ballPosition === "right" ? "left" : "right");
     setIsFlipped(!isFlipped);
   };
-  const [isLoggedIn, SetIsLoggedIn] = useState(true);
+  // const [isLoggedIn, SetIsLoggedIn] = useState(true);
   return (
     <Parallax>
       {isLogin ? (
@@ -23,6 +23,7 @@ function Subscription({isLogin}) {
             { title: "Dashboard", direct: "/loggedIn" },
           ]}
           rightLinks={[{ title: "Log Out", direct: "/" }]}
+          setIsLogin={setIsLogin}
         />
       ) : (
         <Navbar
