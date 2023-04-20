@@ -9,11 +9,18 @@
         background-repeat: no-repeat;
     }
 
-    .gradient-div{
-        height: 5rem;
-        background-image: linear-gradient(black, #2C90B7);
+        .gradient-div{
+            height: 5.5rem;
+            background-image: linear-gradient(to bottom,black, #2C90B7);
+        }
+    
+    .abc{
+        div{
+            z-index: -1;
+            inset: -10px 0 0 0 !important;
+            height: 30vh !important;
+        }
     }
-
     .text-area-layer{
         div{
             height: max-content !important;
@@ -69,7 +76,12 @@
                     div {
                         inset: 15px 0 0 0 !important;
                     }
-                    }             
+                }
+        .abc{
+            .gradient-div {
+                height: 40vh;
+            }
+        }        
     }
 }
 

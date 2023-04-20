@@ -62,6 +62,16 @@ function Hero() {
           <div className="animation_layer parallax" id="sea"></div>
         </ParallaxLayer>
       </div>
+      <div className="layer-5c">
+        <ParallaxLayer offset={0} speed={1.1}>
+          <div className="animation_layer parallax" id="sea"></div>
+        </ParallaxLayer>
+      </div>
+      <div className="layer-6">
+        <ParallaxLayer offset={0} speed={1.1}>
+          <div className="animation_layer parallax" id="black-bg"></div>
+        </ParallaxLayer>
+      </div>
     </div>
   );
 }
