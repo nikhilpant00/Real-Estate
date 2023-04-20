@@ -1,12 +1,9 @@
 import React from "react";
-import './index.scss';
+import "./index.scss";
 import { ParallaxLayer } from "@react-spring/parallax";
 
-import image5 from '../../assets/images/footer-removebg-preview.png'
-import {
-  AiFillInstagram,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import image5 from "../../assets/images/footer-removebg-preview.png";
+import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
@@ -19,43 +16,38 @@ function Footer() {
             id="footer-background"
             className="background"
           >
-            <img src={image5} className="footer-image" />
-            <div
-              className="footer-content"
-              
-            >
-              <div className="icons-div">
-                <span className="icon">
-                  <AiFillInstagram
-                    size={22}
-                    color="black"
-                    style={{ marginLeft: "3px", marginTop: "1px" }}
-                  />
+            <img src={image5} className="footer-image" alt="background"/>
+            <div className="footer-content">
+              <div className="icons-div d-flex align-items-center justify-content-center">
+                <span className="icon d-flex align-items-center justify-content-center">
+                  <AiFillInstagram size={22} color="black" />
                 </span>
-                <span className="icon">
+
+                <span className="icon d-flex align-items-center justify-content-center">
                   <FaFacebookF
                     size={22}
                     color="black"
-                    style={{ marginLeft: "3px", marginTop: "1px" }}
                   />
                 </span>
-                <span className="icon">
+
+                <span className="icon d-flex align-items-center justify-content-center">
                   <FaLinkedinIn
                     size={22}
                     color="black"
-                    style={{ marginLeft: "3px", marginTop: "1px" }}
+                    style={{ marginLeft: "2px" }}
                   />
                 </span>
-                <span className="icon">
+
+                <span className="icon d-flex align-items-center justify-content-center">
                   <AiOutlineTwitter
                     size={22}
                     color="black"
-                    style={{ marginLeft: "3px", marginTop: "1px" }}
+                    style={{ marginLeft: "2px" }}
                   />
                 </span>
               </div>
               <div className="info">
-                <p>OCOL@tech.com</p>
+                <p>OCPL@tech.com</p>
                 <p>+919753245671</p>
                 <p>ONLINE FORMS</p>
               </div>

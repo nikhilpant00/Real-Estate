@@ -31,17 +31,16 @@ function Testimonial() {
           </div>
         </ParallaxLayer>
         {/* Text Area Ends */}
-
       </div>
-        {/* Carousel Starts */}
-        <div className="carousel-layer">
-          <ParallaxLayer offset={1.65} speed={0.7}>
-            <div className="carousel-block">
-              <Carousel2 />
-            </div>
-          </ParallaxLayer>
-        </div>
-        {/* Carousel Ends */}
+      {/* Carousel Starts */}
+      <div className="carousel-layer">
+        <ParallaxLayer offset={1.65} speed={0.7}>
+          <div className="carousel-block">
+            <Carousel2 />
+          </div>
+        </ParallaxLayer>
+      </div>
+      {/* Carousel Ends */}
     </div>
   );
 }

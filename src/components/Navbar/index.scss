@@ -1,7 +1,7 @@
 .Navbar {
     div {
         z-index: 10;
-        height: 100px !important;
+        height: max-content !important;
     }
 }
 
@@ -15,7 +15,6 @@
 
     .nav-item {
         margin: auto 4px;
-
         a {
             padding-left: 12px;
             padding-right: 12px;

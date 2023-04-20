@@ -6,6 +6,7 @@
   .login__content {
     align-items: center;
     display: grid;
+    min-height: 100vh;
 
     .login__form {
       display: grid;
@@ -183,10 +184,10 @@
     place-items: center;
   }
 
-  .login__content {
-    width: 1024px;
-    height: 100%;
-  }
+  // .login__content {
+  //   width: 1024px;
+  //   height: ;
+  // }
 
   .login__img {
     border-radius: 3.5rem;
@@ -200,10 +201,10 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .login__content {
-    height: 100%;
-    width: 1150px;
-  }
+  // .login__content {
+  //   height: 100%;
+  //   width: 1150px;
+  // }
 
   .login__form {
     row-gap: 2rem;
@@ -245,17 +246,17 @@
 }
 
 @media screen and (min-width: 1450px) {
-  .login__content {
-    height: 700px;
-    width: 1350px;
-  }
+  // .login__content {
+  //   height: 700px;
+  //   width: 1350px;
+  // }
 }
 
 @media screen and (min-width: 2000px) {
-  .login__content {
-    height: 1200px;
-    width: 1800px;
-  }
+  // .login__content {
+  //   height: 1200px;
+  //   width: 1800px;
+  // }
 
   .login__form {
     height: 700px;
