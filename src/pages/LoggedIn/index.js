@@ -5,12 +5,12 @@ import { Parallax } from "@react-spring/parallax";
 import { BsSearchHeart } from "react-icons/bs";
 import ClientID from "../../assets/constant/client";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const LoggedIn = ({ isLogin, setIsLogin }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResult, setSearchResult] = useState(null);
   const [isPremium, setIsPremium] = useState(false);
-  const [isLoggedIn, SetIsLoggedIn] = useState(true);
 
   const handleSubscription = async () => {
     try {
@@ -51,12 +51,35 @@ const LoggedIn = ({ isLogin, setIsLogin }) => {
           setSearchResult(result);
           console.log("Search result:", result);
         } else {
-          setSearchResult(null);
+          setSearchResult("not_found");
           console.log("No matching property found");
         }
       } else {
         console.error("Error fetching data:", response.statusText);
       }
+
+      let timerInterval;
+      Swal.fire({
+        title: "The Details of the Property is Below",
+        html: "Please Scroll Down <br> Time left: <b></b> ",
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const b = Swal.getHtmlContainer().querySelector("b");
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft();
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("I was closed by the timer ");
+        }
+      });
     } catch (error) {
       console.error("Error:", error);
     }
@@ -110,11 +133,11 @@ const LoggedIn = ({ isLogin, setIsLogin }) => {
                   Perfect Property
                 </span>
               </h2>
-              <p>
+              {/* <p className="text-white">
                 this is where you can find a Perfect property in a simple way.
                 <br></br> Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit, sed do eiusmod tempor
-              </p>
+              </p> */}
             </div>
             <div>
               <div className="search-container">
@@ -126,6 +149,7 @@ const LoggedIn = ({ isLogin, setIsLogin }) => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="search for a property..."
                     className="search-input"
+                    autoComplete="off"
                   />
                   <button
                     type="submit"
@@ -140,7 +164,7 @@ const LoggedIn = ({ isLogin, setIsLogin }) => {
                 </div>
               </div>
             </div>
-            <div className="d-flex align-item-center mt-5">
+            <div className="d-flex align-item-center flex-wrap mt-5">
               <div className="p-3 me-3">
                 <h2 className="hero-numbers">500+</h2>
                 <p>Customers</p>
@@ -156,7 +180,11 @@ const LoggedIn = ({ isLogin, setIsLogin }) => {
             </div>
           </div>
         </section>
-        {searchResult !== null ? (
+        {searchResult === "not_found" ? (
+          <section className="details-section p-sm-5 p-4 m-sm-5 m-3">
+            <h2 className="mb-4">No property found.</h2>
+          </section>
+        ) : searchResult !== null ? (
           <section className="details-section p-sm-5 p-4 m-sm-5 m-3">
             <h2 className="mb-4">
               Property Id:{" "}
