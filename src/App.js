@@ -23,10 +23,8 @@ function App() {
           element={<Landing isLogin={isLogin} setIsLogin={setIsLogin} />}
         />
 
-        {/* <Route path="/login" element={<Login setIsLogin={setIsLogin} />} /> */}
-        {/* <Route path="/signUp" element={<SignUp />} /> */}
-        {/* <Route path="/form" element={<Form />} /> */}
-        <Route path="/auth" element={<Auth setIsLogin={setIsLogin} />} />
+        <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+        <Route path="/signUp" element={<SignUp />} />
 
         <Route element={<PrivateRoutes isLogin={isLogin} />}>
           <Route

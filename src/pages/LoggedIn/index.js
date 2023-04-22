@@ -111,11 +111,10 @@ const LoggedIn = ({ isLogin, setIsLogin }) => {
             { title: "Home", direct: "/" },
             { title: "Subscription", direct: "/subscription" },
           ]}
-          // rightLinks={[
-          //   { title: "Sign Up", direct: "/SignUp" },
-          //   { title: "Login", direct: "/login" },
-          // ]}
-          rightLinks={[{ title: "Authenticate", direct: "/auth" }]}
+          rightLinks={[
+            { title: "Sign Up", direct: "/SignUp" },
+            { title: "Login", direct: "/login" },
+          ]}
         />
       )}
       <div className="login-hero">

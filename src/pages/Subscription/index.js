@@ -31,11 +31,10 @@ function Subscription({ isLogin, setIsLogin }) {
             { title: "Home", direct: "/" },
             { title: "Subscription", direct: "/subscription" },
           ]}
-          // rightLinks={[
-          //   { title: "Sign Up", direct: "/SignUp" },
-          //   { title: "Login", direct: "/login" },
-          // ]}
-          rightLinks={[{ title: "Authenticate", direct: "/auth" }]}
+          rightLinks={[
+            { title: "Sign Up", direct: "/SignUp" },
+            { title: "Login", direct: "/login" },
+          ]}
         />
       )}
       <section className=" p-sm-5 p-3  price-container">
