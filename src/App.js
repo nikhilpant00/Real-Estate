@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+
 import { Route, Routes } from "react-router-dom";
 
 import Landing from "./pages/Landing";
@@ -7,12 +8,13 @@ import SignUp from "./pages/SignUp";
 import LoggedIn from "./pages/LoggedIn";
 import Subscription from "./pages/Subscription";
 import PrivateRoutes from "./private route/privateRoute";
+import Auth from "./components/webauthn";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
-  useEffect(()=>{
-    console.log(isLogin)
-  },[isLogin])
+  useEffect(() => {
+    console.log(isLogin);
+  }, [isLogin]);
   return (
     <>
       <Routes>
@@ -20,8 +22,12 @@ function App() {
           path="/"
           element={<Landing isLogin={isLogin} setIsLogin={setIsLogin} />}
         />
-        <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
-        <Route path="/signUp" element={<SignUp />} />
+
+        {/* <Route path="/login" element={<Login setIsLogin={setIsLogin} />} /> */}
+        {/* <Route path="/signUp" element={<SignUp />} /> */}
+        {/* <Route path="/form" element={<Form />} /> */}
+        <Route path="/auth" element={<Auth setIsLogin={setIsLogin} />} />
+
         <Route element={<PrivateRoutes isLogin={isLogin} />}>
           <Route
             path="/loggedIn"

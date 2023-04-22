@@ -2,10 +2,17 @@ import React from "react";
 import "./index.scss";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { Link } from "react-router-dom";
+import { logout } from "../webauthn/webauthn";
 
-function Navbar({leftLinks, rightLinks, setIsLogin}) {
-
- console.log(leftLinks)
+function Navbar({ leftLinks, rightLinks, setIsLogin }) {
+  const handleLogout = () => {
+    logout().then(() => {
+      setIsLogin(false);
+      console.log("handlelogout");
+      // setProfileData(null);
+    });
+  };
+  console.log(leftLinks);
   return (
     <div className="Navbar">
       <ParallaxLayer offset={0} speed={0}>
@@ -16,7 +23,7 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
           <nav className="navbar navbar-expand-lg navbar-light" id="neubar">
             <div className="container-fluid" style={{ padding: "5px" }}>
               <Link to="/" className="navbar-brand fs-4" style={{marginLeft: '20px', fontFamily: 'Orbitron'}}>
-                OCPL REAL ESTATE
+                Real Estate
               </Link>
               <button
                 className="navbar-toggler"
@@ -32,7 +39,7 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
               <div className="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
                 <ul className="navbar-nav mx-5 text-center">
                   {leftLinks &&
-                    leftLinks.map((link ,index) => (
+                    leftLinks.map((link, index) => (
                       <li className="nav-item" key={index}>
                         <Link
                           to={`${link.direct}`}
@@ -46,18 +53,35 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
                 <ul className="navbar-nav mx-5 lg-justify-content-between text-center">
                   {rightLinks &&
                     rightLinks.map((link, index) => {
-                      if(rightLinks.length===1){
-                        return(<li className="nav-item" key={index}>
+                      if (rightLinks.length === 1) {
+                        return (
+                          <li className="nav-item" key={index}>
+                            <Link to={`${link.direct}`}>
+                              <button
+                                type="button"
+                                className="btn btn-outline-info  mx-2 md:fs-4 fs-5"
+                                onClick={handleLogout}
+                              >
+                                {link.title}
+                              </button>
+                            </Link>
+                          </li>
+                        );
+                      }
+                      return (
+                        <li className="nav-item" key={index}>
                           <Link to={`${link.direct}`}>
                             <button
                               type="button"
-                              className="btn btn-outline-info  mx-2 fs-5"
-                              onClick={() => setIsLogin(false)}
+
+                              className="btn btn-outline-info  mx-2 md:fs-4 fs-5"
+
                             >
                               {link.title}
                             </button>
                           </Link>
-                        </li>)
+
+                 {/*       </li>)
                       }
                       return (
                       <li className="nav-item" key={index}>
@@ -70,7 +94,12 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
                           </button>
                         </Link>
                       </li>
-                    )})}
+                    )})}*/}
+
+                        </li>
+                      );
+                    })}
+
                 </ul>
               </div>
             </div>
@@ -82,4 +111,3 @@ function Navbar({leftLinks, rightLinks, setIsLogin}) {
 }
 
 export default Navbar;
-

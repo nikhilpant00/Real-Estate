@@ -4,7 +4,7 @@ import { AiFillCloseCircle, AiFillCheckCircle } from "react-icons/ai";
 import Navbar from "../../components/Navbar";
 import { Parallax } from "@react-spring/parallax";
 
-function Subscription({isLogin, setIsLogin}) {
+function Subscription({ isLogin, setIsLogin }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [ballPosition, setBallPosition] = useState("left");
   const handleClick = (e) => {
@@ -31,10 +31,11 @@ function Subscription({isLogin, setIsLogin}) {
             { title: "Home", direct: "/" },
             { title: "Subscription", direct: "/subscription" },
           ]}
-          rightLinks={[
-            { title: "Sign Up", direct: "/SignUp" },
-            { title: "Login", direct: "/login" },
-          ]}
+          // rightLinks={[
+          //   { title: "Sign Up", direct: "/SignUp" },
+          //   { title: "Login", direct: "/login" },
+          // ]}
+          rightLinks={[{ title: "Authenticate", direct: "/auth" }]}
         />
       )}
       <section className=" p-sm-5 p-3  price-container">

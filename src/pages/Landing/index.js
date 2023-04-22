@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import './index.scss';
+import React, { useState } from "react";
+import "./index.scss";
 import { Parallax } from "@react-spring/parallax";
 
+import Navbar from "../../components/Navbar";
+import Hero from "../../components/Hero";
+import Features from "../../components/Features";
+import Testimonial from "../../components/Testimonial";
+import Working from "../../components/Working";
+import Footer from "../../components/Footer";
 
-import Navbar from '../../components/Navbar';
-import Hero from '../../components/Hero';
-import Features from '../../components/Features';
-import Testimonial from '../../components/Testimonial';
-import Working from '../../components/Working';
-import Footer from '../../components/Footer';
-
-
-function Landing({isLogin, setIsLogin}) {
+function Landing({ isLogin, setIsLogin }) {
   // const [isLoggedIn, SetIsLoggedIn]= useState(true);
 
   return (
@@ -39,10 +37,11 @@ function Landing({isLogin, setIsLogin}) {
               { title: "Home", direct: "/" },
               { title: "Subscription", direct: "/subscription" },
             ]}
-            rightLinks={[
-              { title: "Sign Up", direct: "/SignUp" },
-              { title: "Login", direct: "/login" },
-            ]}
+            // rightLinks={[
+            //   { title: "Sign Up", direct: "/SignUp" },
+            //   { title: "Login", direct: "/login" },
+            // ]}
+            rightLinks={[{ title: "Authenticate", direct: "/auth" }]}
           />
         )}
         {/* Navbar Ends */}
@@ -71,4 +70,4 @@ function Landing({isLogin, setIsLogin}) {
   );
 }
 
-export default Landing
+export default Landing;
