@@ -47,8 +47,8 @@ function Footer() {
                 </span>
               </div>
               <div className="info">
-                <p>OCPL@tech.com</p>
-                <p>+919753245671</p>
+                <p>nikhilpant00@gmail.com</p>
+                <p>+919582146057</p>
                 <p>ONLINE FORMS</p>
               </div>
               <div className="terms-privacy">
@@ -63,7 +63,7 @@ function Footer() {
                 <span>PRIVACY POLICY </span>
               </div>
               <div className="ocpl-tech">
-                <p>© 2023 - OCPL TECH All Right Reserved</p>
+                <p>© 2023 - All Right Reserved</p>
               </div>
             </div>
           </div>
